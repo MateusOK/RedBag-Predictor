@@ -1,35 +1,39 @@
-import cloudinary
-import cloudinary.api
 import os
 import io
 import requests
 import numpy as np
 from PIL import Image
-from dotenv import load_dotenv
-from fastapi import FastAPI
+from fastapi import FastAPI, BackgroundTasks
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
-from keras.api.models import load_model
-from keras.api.preprocessing import image as keras_image
-from keras.api.applications.vgg16 import preprocess_input
+from keras.models import load_model
+from keras.preprocessing import image as keras_image
+from keras.applications.vgg16 import preprocess_input
+import cloudinary
+import cloudinary.api
+from dotenv import load_dotenv
+import httpx
+import asyncio
 
 app = FastAPI()
 
 load_dotenv()
 
+# Load the saved model
+model = load_model("VGG16.h5")
+
 cloud_name = os.getenv('CLOUD_NAME')
 api_key = os.getenv('API_KEY')
 api_secret = os.getenv('API_SECRET')
+
+# Define the classes
+class_names = ['healthy', 'unhealthy']
 
 cloudinary.config( 
   cloud_name=cloud_name, 
   api_key=api_key, 
   api_secret=api_secret 
 )
-
-model = load_model("VGG16.h5")
-
-class_names = ['healthy', 'unhealthy']
 
 def process_image(public_id):
     image_url = cloudinary.api.resource(public_id)["url"]
@@ -61,6 +65,20 @@ async def image_result(public_id: str):
     analysis_result = process_image(public_id)
     json_response = jsonable_encoder(analysis_result)
     return JSONResponse(content=json_response, status_code=200)
+
+@app.get("/health")
+async def health_check():
+    return {"status": "alive"}
+
+async def keep_alive():
+    while True:
+        async with httpx.AsyncClient() as client:
+            await client.get("http://localhost:8000/health")
+        await asyncio.sleep(300)  # Wait for 5 minutes
+
+@app.on_event("startup")
+async def startup_event():
+    asyncio.create_task(keep_alive())
 
 if __name__ == "__main__":
     import uvicorn
