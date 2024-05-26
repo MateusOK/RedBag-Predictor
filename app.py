@@ -6,9 +6,9 @@ from PIL import Image
 from fastapi import FastAPI, BackgroundTasks
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
-from keras.models import load_model
-from keras.preprocessing import image as keras_image
-from keras.applications.vgg16 import preprocess_input
+from keras.api.models import load_model
+from keras.api.preprocessing import image as keras_image
+from keras.api.applications.vgg16 import preprocess_input
 import cloudinary
 import cloudinary.api
 from dotenv import load_dotenv
