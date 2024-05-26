@@ -7,6 +7,8 @@ import numpy as np
 from PIL import Image
 from dotenv import load_dotenv
 from fastapi import FastAPI
+from fastapi.encoders import jsonable_encoder
+from fastapi.responses import JSONResponse
 from keras.api.models import load_model
 from keras.api.preprocessing import image as keras_image
 from keras.api.applications.vgg16 import preprocess_input
@@ -54,9 +56,11 @@ def process_image(public_id):
     }
     return results
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+@app.get("/result/{public_id}")
+async def image_result(public_id: str):
+    analysis_result = process_image(public_id)
+    json_response = jsonable_encoder(analysis_result)
+    return JSONResponse(content=json_response, status_code=200)
 
 if __name__ == "__main__":
     import uvicorn
