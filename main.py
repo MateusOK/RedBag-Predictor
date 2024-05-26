@@ -2,6 +2,7 @@ import cloudinary
 from dotenv import load_dotenv
 import os
 from fastapi import FastAPI
+from keras.api.models import load_model
 
 app = FastAPI()
 
@@ -16,6 +17,8 @@ cloudinary.config(
   api_key=api_key, 
   api_secret=api_secret 
 )
+
+model = load_model("path_to_model.h5")
 
 @app.get("/")
 async def root():
