@@ -27,7 +27,7 @@ cloudinary.config(
   api_secret=api_secret 
 )
 
-model = load_model("path_to_model.h5")
+model = load_model("VGG16.h5")
 
 class_names = ['healthy', 'unhealthy']
 
