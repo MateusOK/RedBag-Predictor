@@ -20,6 +20,8 @@ cloudinary.config(
 
 model = load_model("path_to_model.h5")
 
+class_names = ['healthy', 'unhealthy']
+
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
