@@ -22,9 +22,9 @@ load_dotenv()
 # Load the saved model
 model = load_model("VGG16.h5")
 
-cloud_name = os.getenv('CLOUD_NAME')
-api_key = os.getenv('API_KEY')
-api_secret = os.getenv('API_SECRET')
+cloud_name = 'dxggm7sk6'
+api_key = '814598843971855'
+api_secret = 'ZNSWmWoh3aAZvg95gaRaLz3EZ50'
 
 # Define the classes
 class_names = ['healthy', 'unhealthy']

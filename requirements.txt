@@ -6,3 +6,4 @@ Pillow
 requests
 cloudinary
 python-dotenv
+httpx
