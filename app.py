@@ -67,7 +67,7 @@ async def image_result(public_id: str):
 
 @app.get("/health")
 async def health_check():
-    return {"status": "alive"}
+    return {"status": "alive-1"}
 
 if __name__ == "__main__":
     import uvicorn
