@@ -12,8 +12,7 @@ from keras.api.applications.vgg16 import preprocess_input
 import cloudinary
 import cloudinary.api
 from dotenv import load_dotenv
-import httpx
-import asyncio
+
 
 app = FastAPI()
 
@@ -22,9 +21,9 @@ load_dotenv()
 # Load the saved model
 model = load_model("VGG16.h5")
 
-cloud_name = 'dxggm7sk6'
-api_key = '814598843971855'
-api_secret = 'ZNSWmWoh3aAZvg95gaRaLz3EZ50'
+cloud_name = os.getenv('CLOUD_NAME')
+api_key = os.getenv('API_KEY')
+api_secret = os.getenv('API_SECRET')
 
 # Define the classes
 class_names = ['healthy', 'unhealthy']
@@ -69,16 +68,6 @@ async def image_result(public_id: str):
 @app.get("/health")
 async def health_check():
     return {"status": "alive"}
-
-async def keep_alive():
-    while True:
-        async with httpx.AsyncClient() as client:
-            await client.get("http://localhost:8000/health")
-        await asyncio.sleep(300)  # Wait for 5 minutes
-
-@app.on_event("startup")
-async def startup_event():
-    asyncio.create_task(keep_alive())
 
 if __name__ == "__main__":
     import uvicorn
