@@ -3,7 +3,7 @@ import io
 import requests
 import numpy as np
 from PIL import Image
-from fastapi import FastAPI, BackgroundTasks
+from fastapi import FastAPI
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from keras.api.models import load_model
@@ -50,7 +50,7 @@ def process_image(public_id):
     predictions = model.predict(img_array)
     predicted_class_index = np.argmax(predictions[0])
     predicted_class = class_names[predicted_class_index]
-    confidence = predictions[0][predicted_class_index] * 100
+    confidence = float(predictions[0][predicted_class_index]) * 100  
 
     # Return the results
     results = {
