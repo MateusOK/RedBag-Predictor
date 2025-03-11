@@ -1,17 +1,19 @@
-[PYTHON_BADGE]:https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
-[FastAPI_BADGE]:https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi
-[CLOUDINARY_BADGE]:https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=Cloudinary&logoColor=white
-[KERAS_BADGE]:https://img.shields.io/badge/Keras-FF0000?style=for-the-badge&logo=keras&logoColor=white
-[TENSORFLOW_BADGE]:https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white
-
 ![banner](https://github.com/user-attachments/assets/3b92c249-3956-49c8-88fb-811fa400f6e4)
-# 🐕 **RedBag API (Python)**
+<h1 align="center">🐕 RedBag API (Python) </h1>
 
-![Python][PYTHON_BADGE] ![FastAPI][FastAPI_BADGE] ![CLOUDINARY][CLOUDINARY_BADGE] ![KERAS][KERAS_BADGE] ![TENSORFLOW][TENSORFLOW_BADGE]
+<p align="center">
+  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" />
+  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" />
+  <img src="https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=Cloudinary&logoColor=white" />
+  <img src="https://img.shields.io/badge/Keras-FF0000?style=for-the-badge&logo=keras&logoColor=white" />
+  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
+</p>
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
-[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
+<p align="center">
+  <a href="https://bitbucket.org/lbesson/ansi-colors"><img src="https://img.shields.io/badge/Maintained%3F-no-red.svg" /></a>
+  <a href="https://github.com/Naereen/StrapDown.js/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Naereen/StrapDown.js.svg" /></a>
+  <a href="https://GitHub.com/Naereen/ama"><img src="https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg" /></a>
+</p>
 
 ## 📌 **Project Overview**
 
