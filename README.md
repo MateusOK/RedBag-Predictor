@@ -1,5 +1,5 @@
 ![banner](https://github.com/user-attachments/assets/3b92c249-3956-49c8-88fb-811fa400f6e4)
-<h1 align="center">🐕 RedBag API (Python) </h1>
+<h1 align="center">🐕 RedBag Predictor</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" />
@@ -17,11 +17,11 @@
 
 ## 📌 **Project Overview**
 
-The **RedBag API** is a project developed at **Fatec Registro**, designed to provide a fast and accurate diagnosis for **dogs with cataracts**. Using **Convolutional Neural Networks (CNNs)**, this API implements a predictive model capable of classifying animals as **healthy or affected by cataracts** efficiently.
+The **RedBag-Predictor** is a predictive microservice developed at Fatec Registro, designed to provide fast and accurate diagnoses for dogs with cataracts. Using Convolutional Neural Networks (CNNs), this API classifies images to determine whether an animal is healthy or affected by cataracts.
 
-This **Python-based API** works in conjunction with the **RedBag API (Java)**, which serves as a **Backend for Frontend (BFF)** to handle interactions between the front-end and backend services.
+This Python-based microservice works in conjunction with the **RedBag-Core**, which acts as the core backend, handling user management, database operations, and API integrations.
 
-👉 Access the [RedBag API (Java)](https://github.com/MateusOK/Redbag.git) for more details.
+👉 Access the [RedBag-Core](https://github.com/MateusOK/Redbag-Core) for more details.
 
 ---
 
