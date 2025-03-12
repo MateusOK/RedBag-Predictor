@@ -33,7 +33,7 @@ Before running this project, ensure you have the following installed:
 
 - [Python](https://www.python.org/)
 - [Cloudinary Account](https://cloudinary.com/)
-- [RedBag API (Java)](https://github.com/MateusOK/Redbag.git) (must be running for full functionality)
+- [RedBag-Core](https://github.com/MateusOK/Redbag-Core) (must be running for full functionality)
 
 ### **Cloning the Repository**
 
