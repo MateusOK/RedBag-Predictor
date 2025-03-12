@@ -40,7 +40,7 @@ Before running this project, ensure you have the following installed:
 Clone this project to your local machine:
 
 ```bash
-git clone https://github.com/MateusOK/RedBag-Python-API.git
+git clone https://github.com/MateusOK/RedBag-Predictor.git
 ```
 
 After cloning, navigate to the project directory and install dependencies:
