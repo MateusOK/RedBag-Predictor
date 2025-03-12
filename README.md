@@ -46,7 +46,7 @@ git clone https://github.com/MateusOK/RedBag-Predictor.git
 After cloning, navigate to the project directory and install dependencies:
 
 ```bash
-cd RedBag-Python-API
+cd RedBag-Predictor
 pip install -r requirements.txt
 ```
 
